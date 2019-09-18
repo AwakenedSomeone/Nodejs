@@ -38,7 +38,11 @@ server.on('request', function (request, response) {
                 price: 1999
             }
         ]
-        // 响应内容只能是二进制数据或者字符串
+        // 响应内容只能是二进制数据或者字符串  
+        // 在服务器端默认发送的数据，其实是UTF-8编码的内容
+        // 浏览器不知道是utf-8的编码格式，就使用当前操作系统默认的编码格式，中文是gbk
+        // 解决方法是正确的告诉浏览器发送的编码格式
+        response.setHeader('Content-Type','application/json;charset=utf-8')
         response.end(JSON.stringify(products));
     }
 })
