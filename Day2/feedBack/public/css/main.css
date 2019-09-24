@@ -5,16 +5,66 @@ html, body {
     height: 100%;
     box-sizing: border-box;
 }
+a {
+    text-decoration: none;
+}
 ul, h1 {
     margin: 0;
     padding: 0;
+}
+.lt {
+    float: left;
+}
+.rt {
+    float: right;
+}
+.clearfix::after {
+    display: block;
+    content: "";
+    clear: both;
+    *zoom: 1;
+}
+.mgt10 {
+    margin-top: 10px;
+}
+.mgt40 {
+    margin-top: 40px;
+}
+.ft18 {
+    font-size: 18px;
+}
+.gray {
+    color: #999;
+}
+.blue_f24 {
+    color: rgb(72, 178, 228);
+    font-size: 24px;
+}
+.wall {
+    width: 100%;
+}
+.input_normal {
+    margin: 10px 0;
+    padding: 10px 7px;
+    outline: none;
+    border-style: none;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+.normal_btn {
+    outline: none;
+    padding: 10px 20px;
+    background: #fff;
+    border-radius: 5px;
+    border: 1px solid #ccc;
 }
 .title {
     text-align: center;
 }
 .content_wrapper {
     width: 80%;
-    margin: 0 auto;
+    margin-left: auto;
+    margin-right: auto;
 }
 .ctrl_bar {
     padding: 20px;

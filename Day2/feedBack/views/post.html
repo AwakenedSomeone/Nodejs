@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>评论</title>
+    <link rel="stylesheet" href="../public/css/main.css">
+</head>
+<body>
+    <div class="content_wrapper mgt40">
+        <div>
+            <a class="disi blue_f24" href="/">首页</a>
+            <span class="disi gray">发表评论</span>
+        </div>
+        <form action="/submitMessage" class="mgt10">
+            <label for="input_name">你的姓名</label>
+            <input class="input_normal wall" type="text" name="name" id="input_name" required minlength="2" maxlength="10"
+                placeholder="请输入你的名字">
+            <label for="textarea_message">留言</label>
+            <textarea class="input_normal wall" name="message" id="textarea_message" required minlength="5" maxlength="20" cols="30" rows="10"></textarea>
+            <button type="submit" class="normal_btn">发表</button>
+        </form>
+    </div>
+</body>
+</html>

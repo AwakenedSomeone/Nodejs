@@ -10,13 +10,12 @@
 <body>
     <h1 class="title">简易留言板</h1>
     <div class="content_wrapper">
-        <div class="ctrl_bar"><button class="normal_button">发表留言</button></div>
+        <div class="ctrl_bar"><a class="normal_button" href="/post">发表留言</a></div>
         <div>
             <ul class="message_item">
-                <li>first</li>
-                <li>second</li>
-                <li>first</li>
-                <li>second</li>
+                {{each comments}}
+               <li class="clearfix"><span class="lt">{{$value.name}}说：{{$value.message}}</span><span class="rt">{{$value.dateTime}}</span></li>
+               {{/each}}
             </ul>
         </div>
     </div>
