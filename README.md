@@ -121,3 +121,13 @@
   + 第三方web开发框架
   + 高度封装了http模块
   + 更加专注于业务，而非底层细节
+  ### 静态服务
+    ```javascript 
+    app.use('/public/', express.static('./public/'))
+    ```
+ 
+  # 自动重启服务器
+   ## nodemon
+   + 基础nodejs开发的第三方命令工具，独立安装
+   + npm i --global nodemon
+   + 安装完成之后，使用nodemon app.js来启动服务器，就可以在更新文件之后自动重启
